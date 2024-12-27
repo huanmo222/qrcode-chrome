@@ -1,0 +1,63 @@
+#qr-container {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  z-index: 2147483647;
+}
+
+#qr-floating-icon {
+  width: 40px;
+  height: 40px;
+  background: white;
+  border-radius: 50%;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s;
+}
+
+#qr-floating-icon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+#qr-floating-icon img {
+  width: 24px;
+  height: 24px;
+}
+
+#qr-area {
+  position: absolute;
+  right: 0;
+  bottom: 50px;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+  padding: 20px;
+}
+
+.qr-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.site-info {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+#favicon {
+  width: 16px;
+  height: 16px;
+}
+
+#site-name {
+  color: #1d1d1f;
+  font-size: 14px;
+  font-weight: 500;
+} 

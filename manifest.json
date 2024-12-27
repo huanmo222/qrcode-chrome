@@ -1,0 +1,41 @@
+{
+  "manifest_version": 3,
+  "name": "网页二维码",
+  "version": "1.0",
+  "description": "为当前网页生成带网站图标的二维码",
+  "icons": {
+    "16": "icons/icon.svg",
+    "48": "icons/icon.svg",
+    "128": "icons/icon.svg"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon.svg",
+      "48": "icons/icon.svg",
+      "128": "icons/icon.svg"
+    }
+  },
+  "permissions": [
+    "activeTab",
+    "scripting"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["content.css"],
+      "js": ["qrcode.min.js", "qrcode-generator.js", "content.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": [
+      "icons/*",
+      "qrcode.min.js"
+    ],
+    "matches": ["<all_urls>"]
+  }]
+} 
